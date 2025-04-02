@@ -29,7 +29,26 @@ class ll:
         nd.next = temp.next
         temp.next = nd
 
-            
+    
+    def del_b(self):
+        temp = self.head
+        self.head = temp.next
+        temp.next = None
+    
+    def del_e(self):
+        temp = self.head
+        while temp.next.next:
+            temp = temp.next
+        temp.next = None
+
+
+    def del_p(self,pos):
+        temp = self.head
+
+        for i in range(1,pos-1):
+            temp = temp.next
+        temp.next = temp.next.next
+        
 
 
 
@@ -59,7 +78,7 @@ l.insert_e(60)
 l.insert_e(70)
 l.insert_e(80)
 
-
+l.del_p(4)
 
 
 
