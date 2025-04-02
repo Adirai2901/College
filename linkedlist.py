@@ -17,8 +17,19 @@ class ll:
         temp = self.head
         while temp.next:
             temp = temp.next
-
         temp.next = nd
+
+
+    def insert_p(self,pos,data):
+        nd = Node(data)
+        temp = self.head
+        for i in range(0,pos-1):
+            temp = temp.next
+        nd.data = data
+        nd.next = temp.next
+        temp.next = nd
+
+            
 
 
 
@@ -39,7 +50,15 @@ class ll:
 l = ll()
 
 l.insert_b(20)
+l.insert_b(10)
+l.insert_b(0)
+l.insert_p(3,30)
+l.insert_p(4,40)
 l.insert_e(50)
+l.insert_e(60)
+l.insert_e(70)
+l.insert_e(80)
+
 
 
 
