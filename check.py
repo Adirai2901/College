@@ -19,6 +19,9 @@ class ll:
             temp = temp.next
         print("None")
 
+
+
+
 l = ll()
 n = Node(10)
 n1 = Node(20)

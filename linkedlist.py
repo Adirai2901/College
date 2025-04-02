@@ -7,11 +7,26 @@ class ll:
     def __init__(self):
         self.head = None
 
+    def insert_b(self,data):
+        nd = Node(data)
+        nd.next = self.head
+        self.head = nd
+
+    def insert_e(self,data):
+        nd = Node(data)
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+
+        temp.next = nd
+
+
+
     def display(self):
         
         if self.head is None:
             print("None")
-            
+
         temp = self.head
         while temp:
             print(temp.data,end=("->"))
@@ -23,10 +38,11 @@ class ll:
        
 l = ll()
 
-n = Node(10)
-n1 = Node(20)
-n.next =n1
-l.head = n
+l.insert_b(20)
+l.insert_e(50)
+
+
+
 
 l.display()
 
