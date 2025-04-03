@@ -16,7 +16,6 @@ class Queue:
             return None
         item = self.queue.pop(0)
         print(f"Dequeued: {item}")
-        return item
 
   
     def peek(self):
@@ -24,25 +23,14 @@ class Queue:
             print("Queue is empty. Nothing to peek.")
             return None
         print(f"Front of the queue: {self.queue[0]}")
-        return self.queue[0]
-
-    
-
-   
-    def size(self):
-        print(f"Queue size: {len(self.queue)}")
-        return len(self.queue)
 
 
-if __name__ == "__main__":
-    q = Queue()
-    q.enqueue(10)
-    q.enqueue(20)
-    q.enqueue(30)
-    q.peek()
-    q.size()
-    q.dequeue()
-    q.size()
-    q.dequeue()
-    q.dequeue()
-    q.dequeue()
+q = Queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+q.peek()
+q.dequeue()
+q.dequeue()
+q.dequeue()
+q.dequeue()
