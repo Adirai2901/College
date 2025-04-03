@@ -41,8 +41,23 @@ class Stack:
     
 
 s = Stack()
-s.push()
-s.pop()
+num = int(input("Enter the number of opertaions: "))
+for i in range(1, num):
+    print("1-Push\n2-Pop\n3-Peak")
+    x = int(input("Enter which operation: "))
+    if x == 1:
+        s.push()
+    elif x ==2 :
+        s.pop()
+    elif x== 3:
+        s.peek()
+    else:
+        print("Enter a valid operation")
+
+
+    
+
+
 s.print()
 
         
