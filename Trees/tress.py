@@ -20,7 +20,7 @@ class Node:
         print(self.data,end=(" "))
 
     def preorder(self):
-        print(self.data,end)
+        print(self.data,end = (" "))
         if self.left:
             self.left.preorder()
         if self.right:
