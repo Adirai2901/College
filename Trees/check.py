@@ -23,6 +23,7 @@ val = list(map(int,input("Enter the values").split()))
 for val in val:
     root = tree(root,val)
 
+
 def inOrder(root):
     if root:
         inOrder(root.left)
