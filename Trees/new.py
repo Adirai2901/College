@@ -1,3 +1,17 @@
-val = map(int,input("Enter the values").split())
+class Tree:
+    def __init__(self, key):
+        self.value = key
+        self.left = None
+        self.right = None
 
-print(type(val))
+def insert(root, key):
+    if root is None:
+        return Tree(key)
+    else:
+        if root.value < key:
+            root.right = insert(root.right, key)
+        else:
+            root.left = insert(root.left, key)
+    return root
+
+    
